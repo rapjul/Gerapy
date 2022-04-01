@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    container_name: Gerapy
+    build: .
+    #command: /app/docker/entry start-dev
+    volumes:
+      - /volume1/docker/gerapy:/app/gerapy
+    ports:
+      - 8998:8000
+    restart: unless-stopped
